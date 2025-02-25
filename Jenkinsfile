@@ -5,7 +5,9 @@ pipeline {
     dockerImage = ""
   }
 
-  agent any
+  agent{
+    dockerfile true
+  }
 
   stages {
 
@@ -17,9 +19,6 @@ pipeline {
     }
 
     stage('Build image') {
-      environment{
-        DOCKERFILE_LOCATION = "cache/dockerfile"
-      }
       steps{
         script {
           echo "Building the image"
