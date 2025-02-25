@@ -18,7 +18,7 @@ pipeline {
 
     stage('Build image') {
       environment{
-        DOCKERFILE = "cache/dockerfile"
+        DOCKERFILE_LOCATION = "cache/dockerfile"
       }
       steps{
         script {
