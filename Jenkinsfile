@@ -12,7 +12,7 @@ pipeline {
     stage('Checkout Source') {
       steps {
         echo "Cloning the code"
-        git 'https://github.com/zeandemi/stock-price-cache-app.git'
+        git url:'https://github.com/zeandemi/stock-price-cache-app.git', branch: "main"
       }
     }
 
