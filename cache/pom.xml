@@ -6,7 +6,7 @@
 
     <groupId>com.techbleat</groupId>
     <artifactId>stock-cache</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>Stock Cache</name>
     <description>Spring Boot application with Redis caching for stock prices</description>
     <packaging>jar</packaging>
