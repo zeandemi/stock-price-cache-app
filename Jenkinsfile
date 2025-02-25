@@ -23,7 +23,6 @@ pipeline {
       steps{
         script {
           echo "Building the image"
-          dir("${DOCKERFILE}")  
           dockerImage = docker.build dockerimagename
         }
       }
