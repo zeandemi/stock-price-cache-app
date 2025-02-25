@@ -17,9 +17,13 @@ pipeline {
     }
 
     stage('Build image') {
+      environment{
+        DOCKERFILE = "cache/dockerfile"
+      }
       steps{
         script {
-          echo "Building the image"  
+          echo "Building the image"
+          dir("${DOCKERFILE}")  
           dockerImage = docker.build dockerimagename
         }
       }
