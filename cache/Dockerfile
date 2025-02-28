@@ -1,5 +1,5 @@
 # Step 1: Use an official Maven image to build the application
-FROM maven:3.8.6-openjdk-11 as build
+FROM maven:3.8.6-openjdk-11 AS build
 
 # Set the working directory in the container
 WORKDIR /app
@@ -23,7 +23,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the jar file from the build stage to the container
-COPY --from=build /app/target/stock-cache-0.0.1-SNAPSHOT.jar /app/stock-cache.jar
+COPY --from=build /app/target/stock-price-cache-app-0.0.2-SNAPSHOT.jar /app/stock-cache.jar
 
 # Expose the port the application runs on
 EXPOSE 8080

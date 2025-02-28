@@ -5,7 +5,9 @@ pipeline {
     dockerImage = ""
   }
 
-  agent any
+  agent{
+    dockerfile true
+  }
 
   stages {
 
@@ -17,6 +19,9 @@ pipeline {
     }
 
     stage('Build image') {
+      environment{
+        
+      }
       steps{
         script {
           echo "Building the image"
